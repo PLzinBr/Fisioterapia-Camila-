@@ -10,18 +10,17 @@ export const site = {
   crefito: 'CREFITO-3 425916-F',
   region: 'São Paulo e Caieiras',
 
-  // TODO: substituir pelo WhatsApp real (formato: 55 + DDD + número, só dígitos)
-  whatsapp: '5511900000000',
+  // WhatsApp (formato: 55 + DDD + número, só dígitos)
+  whatsapp: '5511984826852',
+  phoneDisplay: '(11) 98482-6852',
   whatsappMessage: 'Olá, gostaria de agendar uma avaliação com a Dra. Camila Morais.',
 
   instagram: 'fisio_camilamorais',
 
-  // TODO: confirmar e-mail e horários reais
+  // TODO: confirmar e-mail real
   email: 'contato@camilamoraisfisio.com.br',
-  hours: [
-    { days: 'Segunda a sexta', time: '8h às 19h' },
-    { days: 'Sábado', time: '8h às 12h' },
-  ],
+  // Conforme o perfil do WhatsApp Business: atendimento somente com hora marcada
+  hours: [{ days: 'Atendimento', time: 'Somente com hora marcada' }],
 
   /**
    * Fotos: coloque os arquivos em /public/images e preencha os caminhos

@@ -1,4 +1,4 @@
-import { Clock, Mail, MapPin } from 'lucide-react';
+import { Clock, Mail, MapPin, Phone } from 'lucide-react';
 import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import Logo from './Logo';
 import { instagramLink, navLinks, site, whatsappLink } from '../config';
@@ -67,7 +67,13 @@ export default function Footer() {
             <li>
               <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="flex gap-3 transition-colors hover:text-ivory">
                 <FaWhatsapp className="h-4 w-4 shrink-0 text-gold-400" />
-                WhatsApp
+                WhatsApp {site.phoneDisplay}
+              </a>
+            </li>
+            <li>
+              <a href={`tel:+${site.whatsapp}`} className="flex gap-3 transition-colors hover:text-ivory">
+                <Phone className="h-4 w-4 shrink-0 text-gold-400" />
+                Ligar {site.phoneDisplay}
               </a>
             </li>
             <li>

@@ -22,8 +22,8 @@ npm run build    # gera /dist
 
 Tudo isso fica em `src/config.js` e `src/data/content.js`:
 
-- [ ] **WhatsApp real** em `site.whatsapp` (formato `5511999999999`). Hoje está um número fictício — os botões não funcionam até trocar.
-- [ ] **E-mail e horários** reais em `site.email` / `site.hours`.
+- [x] WhatsApp real: (11) 98482-6852.
+- [ ] **E-mail** real em `site.email` (hoje é fictício).
 - [ ] **Fotos**: colocar em `public/images/` e preencher `site.images.hero` e `site.images.about`.
 - [ ] **Depoimentos reais** em `testimonials` (com autorização por escrito do paciente) e remover `isExample: true`. Os atuais são ilustrativos e aparecem com o selo "Exemplo ilustrativo".
 - [ ] **Formação / cursos** da Camila na seção Sobre (`src/components/About.jsx`).
