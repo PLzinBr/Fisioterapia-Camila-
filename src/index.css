@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* compensa o header fixo ao navegar por âncoras */
+    scroll-padding-top: 6rem;
+  }
+  body {
+    @apply bg-ivory font-sans text-charcoal antialiased;
+  }
+  h1, h2, h3 {
+    @apply font-serif text-petrol-900;
+  }
+  ::selection {
+    @apply bg-petrol-700 text-ivory;
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+  /* Rótulo pequeno acima dos títulos de seção */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-gold-600;
+  }
+  .eyebrow::before {
+    content: '';
+    @apply h-px w-8 bg-gold-500;
+  }
+  /* Glassmorphism */
+  .glass {
+    @apply border border-white/60 bg-white/55 backdrop-blur-xl;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-petrol-500;
+  }
+  .btn-primary {
+    @apply btn bg-petrol-800 text-ivory shadow-soft hover:bg-petrol-700 hover:shadow-lift;
+  }
+  .btn-whatsapp {
+    @apply btn bg-[#25D366] text-white shadow-soft hover:bg-[#1EBE5A] hover:shadow-lift;
+  }
+  .btn-ghost {
+    @apply btn border border-petrol-800/20 bg-white/40 text-petrol-900 backdrop-blur hover:border-petrol-800/40 hover:bg-white/70;
+  }
+}
+
+/* Animações de scroll (fade-in + slide-up) controladas pelo componente <Reveal> */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .animate-pulse-ring, .animate-float { animation: none !important; }
+}
